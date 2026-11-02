@@ -3,7 +3,6 @@ vocab_book = {
     "water" : "水",
     "desk" : "桌子",
 }
-
 while True:
     number = input("请输入你需要的功能（1.查词 2.添加单词 3.删除单词 4.退出 5.查看全部）:")
     if number == "1":
