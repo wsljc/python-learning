@@ -2,12 +2,11 @@ vocab_book = {}
 with open("vocab.txt","r",encoding="utf-8") as f:
     vocab = f.read()
 vocab = vocab.split("\n")
-for items in vocab :
-    if items == "":
+for line in vocab :
+    if line == "":
         continue
-    else:
-        word = items.split(",")
-        vocab_book[word[0]] = word[1]
+    word = line.split(",")
+    vocab_book[word[0]] = word[1]
 
 while True:
     number = input("请输入你需要的功能（1.查词 2.添加单词 3.删除单词 4.退出 5.查看全部）:")
