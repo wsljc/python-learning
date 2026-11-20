@@ -23,6 +23,9 @@ header {
     display: flex;
     padding: 20px;
     border-bottom: 2px solid #ccc;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 ul {
     display: flex;
@@ -71,20 +74,61 @@ a:hover {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.2s;
 }
 .project-card{
     background: var(--card-bg);
     border-radius: 12px;
     padding: 24px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeIn 0.5s ease-out;
 }
 
 .project-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     gap: 20px;
-    justify-content: center;
 }
 
 section {
     display:block;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+}
+.project-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.avatar:hover {
+    transform: scale(1.05);
+}
+nav a.active {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h2 {
+    font-size: 22px;
+    margin: 28px 0 12px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
 }
