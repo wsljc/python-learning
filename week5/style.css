@@ -35,7 +35,7 @@ ul {
 }
 
 main{
-    background: var(--color-bg);
+    background: var(--card-bg);
     border-radius: var(--radius);
     padding: 24px;
     margin: 20px auto;
@@ -127,4 +127,8 @@ h2 {
 h3 {
     font-size: 17px;
     margin-bottom: 6px;
+}
+
+main p {
+    text-align: left;
 }
